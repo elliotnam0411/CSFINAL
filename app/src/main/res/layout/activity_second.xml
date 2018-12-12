@@ -1,108 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SecondActivity">
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:orientation="vertical"></LinearLayout>
-
-    <EditText
-        android:id="@+id/roomNumber"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="245dp"
-        android:layout_marginBottom="18dp"
-        android:hint="Room Number"
-        android:text="713"
-        app:layout_constraintBottom_toTopOf="@+id/n1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/n1"
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="312dp"
-        android:layout_marginBottom="8dp"
-        android:text="Haowei Shi"
-        app:layout_constraintBottom_toTopOf="@+id/n2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/roomNumber" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="-75dp">
 
-    <TextView
-        android:id="@+id/n2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="311dp"
-        android:layout_marginBottom="8dp"
-        android:text="Yinfei Zhu"
-        app:layout_constraintBottom_toTopOf="@+id/n3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/n1" />
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Date Delivered"
+                android:textStyle="bold"
+                android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/n3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="311dp"
-        android:layout_marginBottom="8dp"
-        android:text="Elliot Nam"
-        app:layout_constraintBottom_toTopOf="@+id/n4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/n2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Status"
+                android:textColorHighlight="@color/colorPrimary"
+                android:textStyle="bold"
+                android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/n4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="311dp"
-        android:layout_marginBottom="309dp"
-        android:text="Hideki Maeda"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/n3" />
+        </TableRow>
 
-    <EditText
-        android:id="@+id/firstName"
-        android:layout_width="200dp"
+        <TableRow android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/firstdate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:text=""
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/firstbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:text="Received"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:visibility="visible" />
 
 
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/seconddate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:text=""
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/secondbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:text="Received"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/thirddate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:text=""
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/thirdbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:text="Received"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/fourthdate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:text=""
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/fourthbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:text="Received"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/fifthdate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:text=""
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/fifthbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:text="Received"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+        </TableRow>
+
+        <TableRow>
+
+
+            <TextView
+                android:id="@+id/sixthdate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:text=""
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/sixthbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:text="Received"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="221dp"
+        android:layout_height="202dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="0dp"
+        app:srcCompat="@drawable/exchanginggifts" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width = "0dp"
         android:layout_height="0dp"
-        android:hint="First Name"
-        android:text="Elliot Nam"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="250dp" />
-
-    <TextView
-        android:id="@+id/messageSent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Message has been sent to Elliot Nam"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="300dp" />
+        android:layout_marginVertical="0dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
 
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
