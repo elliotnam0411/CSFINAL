@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                     if (myConn == null) {
                         z = "Check your Internet Connection";
                     } else {
-                        String query = " ";
+                        String query = "select from user_table where user_id = '" + user name +"' and user_password = '" + password + "'";
                         Statement stmt = myConn.createStatement();
                         ResultSet rs = stmt.executeQuery(query);
                         if (rs.next()) { //while(rs.next) { }
